@@ -1,0 +1,41 @@
+@import "../../colors";
+
+.hero {
+    
+    background-image:
+    linear-gradient(to bottom, 
+      rgba(245,70,66, 0), 
+      $about-background 89%), url(
+    './ex.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: $light-text-color;
+    //padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        background-color: $light-text-color;
+        color: $primary-color;
+        border: none;
+        border-radius: 9px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $dark-text-color;
+        }
+    }
+}

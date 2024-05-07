@@ -1,0 +1,128 @@
+@import '../../colors';
+
+input{
+    box-sizing: border-box;
+}
+
+textarea{
+    box-sizing: border-box;
+}
+
+.contact {
+    //background-color: $contact-background;
+    background-image:
+    linear-gradient(to top, 
+      rgba(245,70,66, 0), 
+      $contact-background 89%), url(
+    './bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+
+    .box{
+        height: 50%;
+        background-color: #eecb9de7;
+        box-shadow: 12px 12px 11px 10px #b6570e;
+        border-radius: 20px;
+        //padding: 10px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        .content{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+
+            .left{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2{
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    h2 {
+        color: $primary-color;
+    }
+
+
+    .contactForm {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        .formField {
+            margin-bottom: 15px;
+            width: 100%;
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                background-color: transparent;
+                width: 100%;
+                padding: 8px;
+                border: 1px solid $dark-text-color;
+                border-radius: 4px;
+                outline: 0;
+                border-width: 0 0 2px;
+                border-color: $primary-color;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+        }
+
+        button {
+            background-color: $primary-color;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: darken($primary-color, 10%);
+            }
+        }
+    }
+}
+
+@media (max-width: 928px) { 
+    .contact .box{
+        flex-direction: column;
+        height: 90%;
+        margin-bottom: 50px;
+        width: 80%;
+        .content{
+            flex-direction: column-reverse;
+            .left{
+                width: 100%;
+                justify-content: start;
+            }
+        }
+    }
+}

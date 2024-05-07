@@ -1,0 +1,61 @@
+@import '../../colors';
+
+.services {
+    background: linear-gradient($services-contact-background, $contact-background);
+    padding: 20px;
+    text-align: center;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        color: $dark-text-color;
+        text-shadow: 5px 5px #703A47;
+    }
+
+    .serviceList {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 60%;
+       
+    }
+
+    .service {
+        background-color: $light-text-color;
+        box-shadow: 12px 12px 2px 1px #703A47;
+        color: $accent-color;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 5px;
+        flex-basis: 30%;
+        transition: all 1s ease;
+
+        &:nth-child(n+3){
+            box-shadow: 12px 12px 2px 1px #936a74;
+        }
+        &:nth-child(n+5){
+            box-shadow: 12px 12px 2px 1px #516477;
+        }
+        &:nth-child(n+7){
+            box-shadow: 12px 12px 2px 1px #1D2E40;
+        }
+        &:hover{
+            width: 300px;
+        }
+
+        h3 {
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        // Responsive design for smaller screens
+        @media (max-width: 600px) {
+            flex-basis: 100%;
+        }
+    }
+}
